@@ -1,0 +1,7 @@
+{
+  "name": "cursoReactIonic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
