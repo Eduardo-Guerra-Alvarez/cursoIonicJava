@@ -43,6 +43,9 @@ const CustomerList: React.FC = () => {
   const addCustomer = () => {
       history.push('/page/customer/new');
   }
+  const editCustomer = (id:string) => {
+      history.push('/page/customer/' + id);
+  }
 
   return (
     <IonPage>
@@ -86,7 +89,7 @@ const CustomerList: React.FC = () => {
                     <IonCol>{cliente.email}</IonCol>
                     <IonCol>{cliente.phone}</IonCol>
                     <IonCol>
-                        <IonButton color="warning" fill="clear">
+                        <IonButton onClick={() => editCustomer(cliente.id)} color="warning" fill="clear">
                             <IonIcon icon={pencil} slot="icon-only"/>
                         </IonButton>
                         <IonButton onClick={() => remove(cliente.id)} color="danger" fill="clear">

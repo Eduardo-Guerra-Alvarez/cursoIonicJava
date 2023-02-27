@@ -7,6 +7,11 @@ export function searchCustomers() {
     return customers;
 }
 
+export function searchCustomerById(id:string) {
+    let customers = searchCustomers();
+    return customers.find((customer:any) => customer.id == id)
+}
+
 export function removeCustomer(id:string) {
     let customers = searchCustomers();
     let index = customers.findIndex((customer:any) => customer.id == id);
